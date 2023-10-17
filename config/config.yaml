@@ -1,0 +1,4 @@
+SCOPES:
+  - "https://www.googleapis.com/auth/drive"
+
+SERVICE_ACCOUNT_FILE: "service_key.json"
