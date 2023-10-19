@@ -1,17 +1,17 @@
 import pytest
 from unittest.mock import Mock, patch
-from quickstarter import create_service, list_files, download_file_kernel
+from main import create_service, list_files, download_file_kernel
 
 
 def test_create_service(mocker):
     # Mock the 'from_service_account_file' method
     mock_from_service_account_file = mocker.patch(
-        "quickstarter.service_account.Credentials.from_service_account_file",
+        "main.service_account.Credentials.from_service_account_file",
         return_value=Mock(),
     )
 
     # Mock the 'build' function
-    mock_build = mocker.patch("quickstarter.build", return_value=Mock())
+    mock_build = mocker.patch("main.build", return_value=Mock())
 
     service = create_service()
 
